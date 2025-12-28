@@ -32,19 +32,24 @@ To develop a C program using the static storage class in a function with a param
 ### Step 8:
   Stop
 # Program:
+
 #include <stdio.h>
+
 void display(int n);
+
 int main()
 {
     int input, i;
     printf("Enter the input value: ");
     scanf("%d", &input);
+    
     for (i = 0; i < 5; i++)
     {
         display(input);
     }
     return 0;
 }
+
 void display(int n)
 {
     static float base = 100.25;
@@ -100,11 +105,14 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 11:
   Stop
 # Program:
+
 #include <stdio.h>
+
 int add(int a, int b);
 int subtract(int a, int b);
 int multiply(int a, int b);
 int divide(int a, int b);
+
 int main()
 {
     int num1, num2, choice, result;
@@ -209,7 +217,9 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 10:
   Stop
 # Program:
+
 #include <stdio.h>
+
 struct employee
 {
     int eno;
@@ -224,6 +234,7 @@ int main()
     float high;
     printf("Enter the number of employees: ");
     scanf("%d", &n);
+    
     for (i = 0; i < n; i++)
     {
         printf("\nEnter details of employee %d\n", i + 1);
@@ -235,6 +246,7 @@ int main()
         scanf("%f", &emp[i].salary);
     }
     high = emp[0].salary;
+    
     for (i = 1; i < n; i++)
     {
         if (emp[i].salary > high)
@@ -243,6 +255,7 @@ int main()
         }
     }
     printf("\nEmployee(s) with the highest salary (%.2f):\n", high);
+    
     for (i = 0; i < n; i++)
     {
         if (emp[i].salary == high)
@@ -300,14 +313,18 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 9:
   Stop
 # Program:
+
 #include <stdio.h>
+
 struct date
 {
     int c_date, c_month, c_year;
     int b_date, b_month, b_year;
     int cal_date, cal_month, cal_year;
 };
+
 void findAge(struct date *d);
+
 int main()
 {
     struct date d;
@@ -322,6 +339,7 @@ int main()
            d.cal_year, d.cal_month, d.cal_date);
     return 0;
 }
+
 void findAge(struct date *d)
 {
     int month[] = {31, 28, 31, 30, 31, 30, 31,
@@ -381,12 +399,15 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 10:
   Stop
 # Program:
+
 #include <stdio.h>
+
 union abc
 {
     int a;
     char b;
 };
+
 int main()
 {
     union abc var;
