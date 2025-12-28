@@ -412,10 +412,13 @@ int main()
 {
     union abc var;
     union abc *ptr;
+    
     ptr = &var;
     var.a = 90;
+    
     printf("Integer value using union pointer: %d\n", ptr->a);
     printf("Character value using union pointer: %c\n", ptr->b);
+    
     return 0;
 }
 
